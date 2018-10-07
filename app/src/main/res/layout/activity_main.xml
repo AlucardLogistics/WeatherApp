@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/btCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
+        android:background="@android:color/transparent"
+        android:text="When"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calendarFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="tvDate"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/calendarFragment"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="103dp"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeatherIcon">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="9dp"
+        android:text="tvTemperature"
+        app:layout_constraintBottom_toTopOf="@+id/tvDesc"
+        app:layout_constraintEnd_toStartOf="@+id/ivIcon"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvDesc"
+        app:layout_constraintBottom_toTopOf="@+id/calendarFragment"
+        app:layout_constraintStart_toStartOf="@+id/calendarFragment" />
+
+    <TextView
+        android:id="@+id/tvHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="tvHumidity"
+        app:layout_constraintStart_toStartOf="@+id/calendarFragment"
+        app:layout_constraintTop_toTopOf="@+id/calendarFragment" />
+
+    <TextView
+        android:id="@+id/tvWeatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="28dp"
+        android:text="icon"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/calendarFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHumidity"
+        app:layout_constraintEnd_toStartOf="@+id/tvWeatherIcon"
+        app:layout_constraintStart_toEndOf="@+id/tvTemperature"
+        app:layout_constraintTop_toTopOf="@+id/btCalendar"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <Button
+        android:id="@+id/btPayPal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:text="PayPal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
